@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Godot 4.4 + Vite</title>
+</head>
+<body>
+  <div id="app">
+    <div id="ui-buttons" style="position: absolute; top: 10px; left: 10px; z-index: 10;">
+      <button id="load-earth">Load Earth</button>
+      <button id="load-mars">Load Mars</button>
+      <button id="load-venus">Load Venus</button>
+    </div>
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <script src="/planety_godot.js"></script>
+  <script>
+    const GODOT_CONFIG = {
+      canvas: document.getElementById('canvas'),
+      executable: '/planety_godot',
+      // Add if needed: arguments, locale, etc.
+    };
+    window.engine = new Engine(GODOT_CONFIG);
+  </script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
