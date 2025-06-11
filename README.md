@@ -104,7 +104,7 @@ Nawet pomimo stosowania prawidłowych metod komunikacji(aktualnych dla wykorzyst
 Powyższy problem w połączeniu z błędnym tagowaniem wersji typów plików JSON przez Godot spodowodował, że zrezygnowałem z eksportowania i importowania plików między warstwą Web a silnikiem aplikacji. Ilość zabezpieczeń, które trzeba pominąć w celu prawidłowego importowania danych mija się z celem ćwiczenia.
 Ostatecznym rozwiązaniem problemu z komunikacją okazało się podejście z pollingiem: funkcje przekazywania danych z JS do Godot są stale wykonywane w żywym procesie interakcji zamiast czekać na poszczególne wywoływanie(zastosowanie większej ilości takich funkcji może znacząco wpłynąć na wydajność).
 Pomimo rozwiązania głównych problemów komunikacji projekt wciąż ma wiele niedociągnięć na które nie mam wpływu lub przerastają moją wiedzę na temat ich działania: 
--model oświetlenia wciąż posiada liczne artefakty(wina eksportowania w trybie zgodności Web),
--przekazywane z JavaScript funkcje zawierają tylko wzkaźniki zmiany danych zamiast ich pełne zasoby(to znaczy: zmień na "Zawarty Preset", zmiast: zmień na "Pełny słownik parametrów konstrukcyjnych zaimportowany z przeglądarki"),
--brak nakładki UI do sterowania poszególnymi parametrami planet(wymaga zbudowania zaawansowanej warstwy interakcji między danymi JS i Godot, co z obecnymi problemami z komunikacją wydaje mi się niemożliwe),
--duże spadki wydajności w momencie wczytywania presetu(wina eksportowania w trybie zgodności Web: brak wsparcia wielowątkowania oraz brak dostępu do warstwy przetwarzania danych na procesorach graficznych).
+- model oświetlenia wciąż posiada liczne artefakty(wina eksportowania w trybie zgodności Web),
+- przekazywane z JavaScript funkcje zawierają tylko wzkaźniki zmiany danych zamiast ich pełne zasoby(to znaczy: zmień na "Zawarty Preset", zmiast: zmień na "Pełny słownik parametrów konstrukcyjnych zaimportowany z przeglądarki"),
+- brak nakładki UI do sterowania poszególnymi parametrami planet(wymaga zbudowania zaawansowanej warstwy interakcji między danymi JS i Godot, co z obecnymi problemami z komunikacją wydaje mi się niemożliwe),
+- duże spadki wydajności w momencie wczytywania presetu(wina eksportowania w trybie zgodności Web: brak wsparcia wielowątkowania oraz brak dostępu do warstwy przetwarzania danych na procesorach graficznych).
